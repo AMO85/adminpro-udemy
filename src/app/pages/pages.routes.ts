@@ -15,6 +15,7 @@ const pagesRoutes: Routes = [
             {path:'dashboard',component: DashboardComponent},
             {path:'progress',component: ProgressComponent},
             {path:'graficas1',component: Graficas1Component},
+            
             //ruta que redirecciona al dashboard cuando no encuentra componente
             {path:'', redirectTo: '/dashboard', pathMatch: 'full'},
     

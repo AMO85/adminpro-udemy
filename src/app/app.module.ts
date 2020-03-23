@@ -6,7 +6,6 @@ import { APP_ROUTES } from './app.routes';
 
 //MODULOS
 import { PagesModule } from './pages/pages.module';
-
 import { FormsModule } from '@angular/forms';
 
 
