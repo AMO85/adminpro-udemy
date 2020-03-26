@@ -5,11 +5,13 @@
         <h5 class="card-title">BARRA DE PROGRESO</h5>
 
         <div class="progress">
+          <!-- para que el angular pueda manejar el div del bootstrap se agregan [] sea como atributo o como estilo -->
             <div class="progress-bar progress-bar-striped progress-bar-animated"  role="progressbar" [attr.ariaValuenow]="progreso1" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'">
           </div>
         </div>
 <br>
         <div class="progress">
+          <!-- para que el angular pueda manejar el div del bootstrap se agregan [] sea como atributo o como estilo -->
           <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"  role="progressbar" [attr.ariaValuenow]="progreso2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'">
         </div>
       </div>
@@ -24,7 +26,7 @@
     <div class="card">
       <div class="card-body">
 
-        <!-- se le llama nombre ya que ese es el que se le puso en el deocrador -->
+        <!-- se le llama el app-incrementador que esta en app/components/incrementador se llama tambn en el pages.module.ts-->
        <app-incrementador (actualizaValor)="progreso1 = $event " nombre='progress azul' [progreso]="progreso1"></app-incrementador>
 
       </div>
@@ -34,7 +36,8 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        
+
+        <!-- se le llama el app-incrementador que esta en app/components/incrementador se llama tambn en el pages.module.ts-->        
           <app-incrementador (actualizaValor)="progreso2 = $event " nombre='progress verde' [progreso]="progreso2" ></app-incrementador>
 
       </div>

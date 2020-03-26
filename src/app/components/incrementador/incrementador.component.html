@@ -8,6 +8,7 @@
       <i class="mdi mdi-minus "></i>
     </button>
   </span>
+  <!-- #txtprogress decorador ViewChild en el .ts -->
   <input #txtprogress type="number" class="from-control" name="progreso" [(ngModel)]="progreso" (ngModelChange)="onChanges($event)" min="1" max="100"/>
   <span class="input-groupe-btn">
     <button class="btn btn-secondary" type="button" (click)="cambiarValor(+5)">

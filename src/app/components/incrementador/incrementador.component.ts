@@ -7,14 +7,14 @@ import { __importDefault } from 'tslib';
   styleUrls: ['./incrementador.component.css']
 })
 export class IncrementadorComponent implements OnInit {
-//decorador para hacer referencia a algo html 
+//decorador para hacer referencia a algo HTML 
   @ViewChild('txtprogress') txtprogress: ElementRef;
 
 //como se le da un nombre al decorador 'Imput' -> se debe cambiar en el progress.component.html
 @Input('nombre') leyenda: string = 'leyenda';
 @Input() progreso: number = 50;
 
-//para poder emitir un numero como evento
+//event emitter se importa del @angular/core ... esto para emitir un <number> como un evento
 @Output('actualizaValor') cambioValor: EventEmitter<number> = new EventEmitter();
 
   constructor() {   
@@ -29,9 +29,6 @@ export class IncrementadorComponent implements OnInit {
 
   }
   onChanges( newValue:number ){
-    //campos con refere (vJs) es porque son vanilla Jscript
-    //(vJs) let elemHTml: any = document.getElementsByName('progreso') [0];
-    //console.log( elemHTml.value )
     
     if ( newValue >= 100 ){
       this.progreso = 100;
@@ -41,8 +38,7 @@ export class IncrementadorComponent implements OnInit {
       this.progreso = newValue;
     }
 
-    //(vJs) elemHTml.value =  this.progreso ;
-
+    //
     this.txtprogress.nativeElement.value = this.progreso;
 
     this.cambioValor.emit( this.progreso );
@@ -67,6 +63,7 @@ export class IncrementadorComponent implements OnInit {
 
     this.progreso = this.progreso + valor;
 
+    //aca se utiliza el output del emitter
     this.cambioValor.emit( this.progreso );
 
   }
