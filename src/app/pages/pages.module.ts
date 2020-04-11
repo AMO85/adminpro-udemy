@@ -19,6 +19,7 @@ import { PAGES_ROUTES } from './pages.routes';
 
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonutComponent } from '../components/grafico-donut/grafico-donut.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { GraficoDonutComponent } from '../components/grafico-donut/grafico-donut
         Graficas1Component,
         PagesComponent,
         IncrementadorComponent,
-        GraficoDonutComponent
+        GraficoDonutComponent,
+        AccountSettingsComponent
         
     ],
     exports: [
